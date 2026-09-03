@@ -17,7 +17,7 @@
 # mailadmin add-user email@domain.tld passwd123
 # mailadmin add-alias alias@domain.tld target@domain.tld
 # mailadmin password email@domain.tld passwd123
-# mailadmin password email@domain.tld passwd123
+# mailadmin delete-user email@domain.tld
 # mailadmin list
 #
 # Database-settings
