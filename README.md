@@ -1,6 +1,6 @@
 ## A helper script to manage Dovecot mailbox users in MySQL from the CLI
 
-A helper to easily manage mailbox users when manage Dovecot IMAP server with using mail store in MariaDB.
+A helper to easily manage mailbox users when manage Dovecot IMAP server with using mailboxes in MariaDB.
 
 ## Install
 Get the script as RAW then move to sbin and make it executable.
