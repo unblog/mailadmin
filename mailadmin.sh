@@ -16,7 +16,7 @@
 # mailadmin add-domain domain.tld
 # mailadmin add-user email@domain.tld passwd123
 # mailadmin add-alias alias@domain.tld target@domain.tld
-# mailadmin password email@domain.tld passwd123
+# mailadmin password email@domain.tld newpasswd
 # mailadmin delete-user email@domain.tld
 # mailadmin delete-alias alias@domain.tld [target@domain.tld]
 # mailadmin delete-domain domain.tld [--force]
