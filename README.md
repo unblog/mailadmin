@@ -14,7 +14,7 @@ mailadmin delete-domain domain.tld [--force]
 mailadmin list
 ```
 
-### Note.
+Note.
 
 `delete-alias alias@domain.tld [target@email.tld]` – with a target, only this single association is deleted; without a target, all aliases with this source address are removed (including counter output).
 

@@ -44,7 +44,7 @@ case "$1" in
         ;;
 
     add-user)
-        if [ -z "$2" ] || [ -z "$3" ]; then echo "Using: $0 add-user <user@domain.tld> <passwort>"; exit 1; fi
+        if [ -z "$2" ] || [ -z "$3" ]; then echo "Using: $0 add-user <user@domain.tld> <password>"; exit 1; fi
         EMAIL="$2"
         PASSWORT="$3"
         DOMAIN=$(echo "$EMAIL" | cut -d@ -f2)
