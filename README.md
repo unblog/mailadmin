@@ -19,6 +19,8 @@ FLUSH PRIVILEGES;
 ```
 * change database name `mailserver` if they use a different one.
 
+> Note. Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check which hashing algorithm scheme using in dovecot.conf.
+
 > Note. create `.mailadmin.cnf` in your $HOME to store mailadmin secret in MySQL.
 
 ```ini
@@ -26,8 +28,6 @@ FLUSH PRIVILEGES;
 user=mailadmin
 password=passwd123
 ```
-> Note. Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check which hashing algorithm scheme using in dovecot.conf.
-
 Usage:
 ```shell
 mailadmin add-domain domain.tld
