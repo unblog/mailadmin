@@ -17,11 +17,11 @@ CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
 FLUSH PRIVILEGES;
 ```
-* change database name `mailserver` if they use a different one.
+**change database name `mailserver` if they use a different one.**
 
 > Note. Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check which hashing algorithm scheme using in dovecot.conf.
 
-> Note. create `.mailadmin.cnf` in your $HOME to store mailadmin secret in MySQL.
+Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
 
 ```ini
 [client]
