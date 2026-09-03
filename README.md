@@ -1,0 +1,1 @@
+# A helper script to manage Dovecot mailbox users in MySQL from the CLI.
