@@ -2,5 +2,12 @@
 
 > Note. Use .mailadmin.cnf in your $HOME directory for your MySQL password.
 
-Released under the GNU General Public License WITHOUT ANY WARRANTY.
-See LICENSE.TXT for details.
+```bash
+Usage:
+mailadmin add-domain domain.tld
+mailadmin add-user email@domain.tld passwd123
+mailadmin add-alias alias@domain.tld target@domain.tld
+mailadmin password email@domain.tld passwd123
+mailadmin password email@domain.tld passwd123
+mailadmin list
+```
