@@ -26,13 +26,11 @@ DB_USER="mailadmin"
 
 # Helper functions for running SQL
 run_sql() {
-    # mysql -u "$DB_USER" -e "$1" "$DB_NAME"
     mysql --defaults-extra-file=/root/.mailadmin.cnf -e "$1" "$DB_NAME"
 }
 
 # Helper function for retrieving a single value
 get_sql_value() {
-    # mysql -u "$DB_USER" -sN -e "$1" "$DB_NAME"
     mysql --defaults-extra-file=/root/.mailadmin.cnf -sN -e "$1" "$DB_NAME"
 }
 
