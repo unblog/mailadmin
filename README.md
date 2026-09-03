@@ -9,7 +9,7 @@ curl -o /tmp/mailadmin.sh https://github.com/unblog/mailadmin/blob/main/mailadmi
 mv mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
-> Note. create .mailadmin.cnf in your $HOME to store MySQL password.
+> Note. create `.mailadmin.cnf` in your $HOME to store the mailadmin secret in MySQL.
 
 ```ini
 [client]
