@@ -15,10 +15,10 @@
 # Usage:
 # mailadmin add-domain domain.tld
 # mailadmin add-user email@domain.tld passwd123
-# mailadmin add-alias alias@domain.tld target@domain.tld
+# mailadmin add-alias alias@domain.tld dest@domain.tld
 # mailadmin password email@domain.tld newpasswd
 # mailadmin delete-user email@domain.tld
-# mailadmin delete-alias alias@domain.tld [target@domain.tld]
+# mailadmin delete-alias alias@domain.tld [dest@domain.tld]
 # mailadmin delete-domain domain.tld [--force]
 # mailadmin list
 #
@@ -76,7 +76,7 @@ case "$1" in
         ;;
 
     add-alias)
-        if [ -z "$2" ] || [ -z "$3" ]; then echo "Using: $0 add-alias <alias@domain.tld> <target@email.tld>"; exit 1; fi
+        if [ -z "$2" ] || [ -z "$3" ]; then echo "Using: $0 add-alias <alias@domain.tld> <dest@email.tld>"; exit 1; fi
         SOURCE="$2"
         DEST="$3"
         DOMAIN=$(echo "$SOURCE" | cut -d@ -f2)
@@ -98,7 +98,7 @@ case "$1" in
         ;;
 
     delete-alias)
-        if [ -z "$2" ]; then echo "Using: $0 delete-alias <alias@domain.tld> [target@email.tld]"; exit 1; fi
+        if [ -z "$2" ]; then echo "Using: $0 delete-alias <alias@domain.tld> [dest@email.tld]"; exit 1; fi
         SOURCE="$2"
         DEST="$3"
 
