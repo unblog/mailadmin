@@ -9,6 +9,16 @@ curl -o /tmp/mailadmin.sh https://github.com/unblog/mailadmin/blob/main/mailadmi
 mv mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
+Create mailadmin database account in MariaDB.
+
+```sql
+mysql -uroot
+CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
+GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
+FLUSH PRIVILEGES;
+```
+* change database name `mailserver` if they use a different one.
+
 > Note. create `.mailadmin.cnf` in your $HOME to store mailadmin secret in MySQL.
 
 ```ini
@@ -16,6 +26,7 @@ chmod +x /usr/local/sbin/mailadmin
 user=mailadmin
 password=passwd123
 ```
+> Note. Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check which hashing algorithm scheme using in dovecot.conf.
 
 Usage:
 ```shell
