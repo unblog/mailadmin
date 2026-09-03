@@ -10,7 +10,7 @@ mv mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
 Note.
-> Note. Use .mailadmin.cnf in your $HOME for your MySQL password.
+> Note. Use .mailadmin.cnf in your $HOME to store MySQL password.
 
 Usage:
 ```bash
