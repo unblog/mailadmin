@@ -1,15 +1,15 @@
 ## A helper script to manage Dovecot mailbox users in MySQL from the CLI
 
-A helper to easily manage mailbox users when manage Dovecot IMAP server with using mailboxes in MariaDB.
+A helper to easily manage mailbox users on Dovecot IMAP server with using mailboxes in MariaDB.
 
 ## Install
-Get the script as RAW then move to sbin and make it executable.
+Get the script as RAW move to sbin and make it executable.
 ```bash
 curl -o /tmp/mailadmin.sh https://github.com/unblog/mailadmin/blob/main/mailadmin.sh
 mv mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
-Create account mailadmin for mailserver database in MariaDB.
+Create account mailadmin for database mailserver in MariaDB.
 
 ```sql
 mysql -uroot
