@@ -18,7 +18,7 @@ CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
 FLUSH PRIVILEGES;
 ```
-> Note: If a password is set for the root, you must also append the -p flag.<br>
+> Note: If a password is set for root, you must also append the -p flag.<br>
 > Change database name `mailserver` if they use a different one.
 
 Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
