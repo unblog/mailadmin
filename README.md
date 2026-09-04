@@ -28,8 +28,8 @@ Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
 user=mailadmin
 password=passwd123
 ```
-Usage:
 ```shell
+Usage:
 mailadmin add-domain domain.tld
 mailadmin add-user email@domain.tld passwd123
 mailadmin add-alias alias@domain.tld dest@domain.tld
