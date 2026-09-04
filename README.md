@@ -12,10 +12,10 @@ chmod +x /usr/local/sbin/mailadmin
 Create account mailadmin with grant rights to database mailserver in MariaDB.
 
 ```sql
-mysql -uroot -e \
-"CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
+mysql -uroot
+CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
-FLUSH PRIVILEGES;"
+FLUSH PRIVILEGES;
 ```
 _change database name `mailserver` if they use a different one._
 
