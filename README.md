@@ -10,6 +10,7 @@ mv mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
 Create account mailadmin with grant rights to database mailserver in MariaDB.
+> Note. Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check hashing scheme using in dovecot.conf.
 
 ```sql
 mysql -uroot
@@ -17,10 +18,7 @@ CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
 FLUSH PRIVILEGES;
 ```
-_change database name `mailserver` if they use a different one._
-
-> Note: If a password is set for the root, you must also append the -p flag.
-> Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check hashing algorithm scheme using in dovecot.conf.
+> Note: If a password is set for the root, you must also append the -p flag. Change database name `mailserver` if they use a different one.
 
 Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
 
