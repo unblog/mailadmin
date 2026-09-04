@@ -19,7 +19,7 @@ FLUSH PRIVILEGES;
 ```
 _change database name `mailserver` if they use a different one._
 
-> Note: If a password is set for the root, you must also append the -p flag (either -p for a subsequent password prompt or directly after it -pYourPassword without spaces).
+> Note: If a password is set for the root, you must also append the -p flag.
 > Run `doveadm pw -s SHA512-CRYPT -p 'passwd123'` for password-hash, check hashing algorithm scheme using in dovecot.conf.
 
 Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
