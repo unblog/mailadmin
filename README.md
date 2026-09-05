@@ -1,6 +1,6 @@
-## A helper script to manage Dovecot mailbox users in MySQL from the CLI
+## A helper script to manage Dovecot mailbox users in MySQL from CLI
 
-A helper to easily manage mailbox users on Dovecot IMAP server with using mailboxes in MariaDB.
+This helper manage easily mailbox users on Dovecot IMAP server using mailboxes in MariaDB.
 
 ## Install
 Get the script as RAW move to sbin and make it executable.
@@ -18,7 +18,7 @@ CREATE USER 'mailadmin'@'localhost' IDENTIFIED BY 'passwd123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON mailserver.* TO 'mailadmin'@'localhost';
 FLUSH PRIVILEGES;
 ```
-> Note: If a password is set for root, you must also append the -p flag.<br>
+> Note: If a password is set for mysql root, you must also append the -p flag.<br>
 > Change database name `mailserver` if they use a different one.
 
 Create `.mailadmin.cnf` in your $HOME to store mailadmin secret.
