@@ -6,7 +6,7 @@ This helper manage easily mailbox users on Dovecot IMAP server using mailboxes i
 Get the script as RAW move to sbin and make it executable.
 ```bash
 curl -o /tmp/mailadmin.sh https://github.com/unblog/mailadmin/blob/main/mailadmin.sh
-mv mailadmin.sh /usr/local/sbin/mailadmin
+mv /tmp/mailadmin.sh /usr/local/sbin/mailadmin
 chmod +x /usr/local/sbin/mailadmin
 ```
 Create account mailadmin with grant rights to database mailserver in MariaDB.
